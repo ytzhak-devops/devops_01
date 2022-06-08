@@ -1,41 +1,31 @@
-# def welcome(name):
-#     username = input('Please enter your name: ')
-#     print(f"Hello {username} and welcome to the World of Games(WoG)\
-#           \nHere you can find many cool games to play.")
-#
-#
-# welcome("username")
-#
-# def menu():
-#     print("[1] Option 1")
-#     print("[2] Option 2")
-#     print("[0] Exit the program.")
-# menu()
-# option = int(input("Enter your option: "))
-#
-# while option != 0:
-#     if option == 1:
-#         #do option 1 stuff
-#         print("Option 1 has been called.")
-#     elif option == 2:
-#         #do option 2 stuff
-#         print("Option 2 has been called.")
-#     else:
-#         print("Invalid option . ")
-#     print()
-#     menu()
-#     option = int(input("Enter your option: "))
-# print("Thanks for using this program. Goodbye.")
+def welcome(name):
+    username = input('Please enter your name: ')
+    print(f"Hello {username} and welcome to the World of Games(WoG)\
+          \nHere you can find many cool games to play.")
 
 
-choice = input("""
-hello enter you coislsl
-a - memoty.lsdfjs
-b - lslsl.sldfjl
-c - sldfjlsd.sfllsdfjlsf
-make a selection : 
-""")
+welcome("username")
 
 
-https://www.youtube.com/watch?v=P6azEyNIQDQ
-https://www.youtube.com/watch?v=TRaXgtTauuE
+def load_game():
+    choice = input("""
+    Please choose a game to play:
+    
+    1. Memory Game        - a sequence of numbers will appear for 1 second and you have to guess it back
+    2. Guess Game         - guess a number and see if you chose like the computer
+    3. Currency Roulette  - try and guess the value of a random amount of USD in ILS
+    
+    make a selection : 
+    """)
+
+    if 1 <= choice.isdigit() <= 3:
+        difficulty = input('Please choose game difficulty from 1 to 5 : ')
+        if 1 <= difficulty.isdigit() <= 5:
+            print(f'You choose {difficulty} level , good luck...')
+        else:
+             print("Not a valid number ! Try again...")
+    else:
+        print("Not a valid number ! Try again...")
+
+load_game()
+
