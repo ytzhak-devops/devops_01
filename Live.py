@@ -30,3 +30,36 @@ def load_game():
 load_game()
 
 
+
+"""
+this is the code , now you can import the functions from the file ans run them :
+from <file name> import <function name>    -->    from Live import welcome, load_game 
+notice:  that you have to be in the same folder directoty of the file  in the terminal, and then open from there the python shell ,and then  enter the "from import command ."
+
+def welcome(name):
+    print(f"Hello {name} and welcome to the world of Games(WOG)\
+    \nHere you can find many cool games to play.")
+
+def load_game():
+    choice = input("""
+    Please choose a game to play:
+
+    1. Memory Game        - a sequence of numbers will appear for 1 second and you have to guess it back
+    2. Guess Game         - guess a number and see if you chose like the computer
+    3. Currency Roulette  - try and guess the value of a random amount of USD in ILS
+
+    make a selection :
+    """)
+
+    if choice.isdigit() and (1 <= int(choice) <= 3):
+        difficulty = input('Please choose game difficulty from 1 to 5 : ')
+        if difficulty.isdigit() and (1 <= int(difficulty) <= 5):
+            print(f'You choose {difficulty} level , good luck...')
+        else:
+             print("Not a valid number ! Try again...")
+    else:
+        print("Not a valid number ! Try again...")
+"""
+    
+
+
