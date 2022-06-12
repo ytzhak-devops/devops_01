@@ -1,5 +1,7 @@
 def load_game():
     
+    print('Hello , Welcome to our Game Zone')
+    
     counter = 1
     tries = 3
     while counter <= tries:
@@ -10,6 +12,7 @@ def load_game():
         2. Guess Game         - guess a number and see if you chose like the computer
         3. Currency Roulette  - try and guess the value of a random amount of USD in ILS
         make a selection :     """)
+        
         counter += 1
         
         if choice.isdigit() and (1 <= int(choice) <= 3):
@@ -17,24 +20,21 @@ def load_game():
             diff_counter = 1
             diff_tries = 3
             while diff_counter <= diff_tries:
-                 
+                
                 difficulty = input('Please choose game difficulty from 1 to 5 : ')
+                
                 diff_counter += 1
-                
+                          
                 if difficulty.isdigit() and (1 <= int(difficulty) <= 5):
-                 
+                                                         
                     print(f'You choose {difficulty} level , good luck...')
-                    break
+                    return
+
+                else:
+                    print("Not a valid number ! Try again...")
             
-              
+            return    
                 
-                
-##                 else:
-##                     print("Not a valid number ! Try again...")
-        else:
-            print("Not a valid number ! Try again...")
-
-   
+                    
 load_game()
-
        
