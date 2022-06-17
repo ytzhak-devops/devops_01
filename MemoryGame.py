@@ -19,7 +19,9 @@ time.sleep(3)
 #hide the numbers
 for i in range(0, 20):
     print('')
-
+    print('')
+    print('')
+    print('')
 
 # check user remember
 
